@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home Fabiola Race 2021</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/costum-footer.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/styles.css') }}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+</head>
+
+<body style="background: var(--gray-dark);">
+    <h1 class="text-center" style="background: var(--purple);font-family: Ubuntu, sans-serif;padding: 10px;"><strong>Home Fabiola - Loopwedstrijd 2021</strong></h1>
+    <div class="d-lg-flex flex-column justify-content-lg-center align-items-lg-center" style="margin: 20px;">
+        <h1 style="font-size: 30px;text-align: center;color: var(--light);">Ranking - Totaal</h1>
+
+        <div class="text-left d-flex d-lg-flex justify-content-start justify-content-lg-start" style="width: 600px;text-align: left;"><strong style="font-size: 20px;color: #ffd700;">Gang {{ totaalrest[0][0] }} :&nbsp;</strong>
+            <p style="font-size: 20px;color: var(--white);margin-left: 8px;"> {{ totaalrest[0][1] }} km</p>
+        </div>
+
+        <div class="text-left d-flex d-lg-flex justify-content-start justify-content-lg-start" style="width: 600px;text-align: left;"><strong style="font-size: 20px;color: #c0c0c0;">Gang {{ totaalrest[1][0] }} :&nbsp;</strong>
+            <p style="font-size: 20px;color: var(--white);margin-left: 8px;"> {{ totaalrest[1][1] }} km</p>
+        </div>
+
+        <div class="text-left d-flex d-lg-flex justify-content-start justify-content-lg-start" style="width: 600px;text-align: left;"><strong style="font-size: 20px;color: #cd7f32;">Gang {{ totaalrest[2][0] }} :&nbsp;</strong>
+            <p style="font-size: 20px;color: var(--white);margin-left: 8px;"> {{ totaalrest[2][1] }} km</p>
+        </div>
+
+        {%for runner in totaalrest[3:]%}
+        <div class="text-left d-flex d-lg-flex justify-content-start justify-content-lg-start" style="width: 600px;text-align: left;"><strong style="font-size: 20px;color: var(--light);">Gang {{ runner[0] }} :&nbsp;</strong>
+            <p style="font-size: 20px;color: var(--white);margin-left: 8px;"> {{ runner[1] }} km</p>
+        </div>
+        {%endfor%}
+
+    </div>
+    <div class="d-lg-flex flex-column justify-content-lg-center align-items-lg-center" style="margin: 20px;">
+        <h1 style="font-size: 30px;text-align: center;color: var(--light);">Ranking - gemiddeld km/persoon</h1>
+
+        <div class="text-left d-flex d-lg-flex justify-content-start justify-content-lg-start" style="width: 600px;text-align: left;"><strong style="font-size: 20px;color: #ffd700;">Gang {{ gemiddeldrest[0][0] }} :&nbsp;</strong>
+            <p style="font-size: 20px;color: var(--white);margin-left: 8px;"> {{ gemiddeldrest[0][1] }} km</p>
+        </div>
+
+        <div class="text-left d-flex d-lg-flex justify-content-start justify-content-lg-start" style="width: 600px;text-align: left;"><strong style="font-size: 20px;color: #c0c0c0;">Gang {{ gemiddeldrest[1][0] }} :&nbsp;</strong>
+            <p style="font-size: 20px;color: var(--white);margin-left: 8px;"> {{ gemiddeldrest[1][1] }} km</p>
+        </div>
+
+        <div class="text-left d-flex d-lg-flex justify-content-start justify-content-lg-start" style="width: 600px;text-align: left;"><strong style="font-size: 20px;color: #cd7f32;">Gang {{ gemiddeldrest[2][0] }} :&nbsp;</strong>
+            <p style="font-size: 20px;color: var(--white);margin-left: 8px;"> {{ gemiddeldrest[2][1] }} km</p>
+        </div>
+
+        {%for runner in gemiddeldrest[3:]%}
+        <div class="text-left d-flex d-lg-flex justify-content-start justify-content-lg-start" style="width: 600px;text-align: left;"><strong style="font-size: 20px;color: var(--light);">Gang {{ runner[0] }} :&nbsp;</strong>
+            <p style="font-size: 20px;color: var(--white);margin-left: 8px;"> {{ runner[1] }} km</p>
+        </div>
+        {%endfor%}
+
+    </div>
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/bootstrap/js/bootstrap.min.js') }}"></script>
+</body>
+
+</html>

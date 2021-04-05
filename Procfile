@@ -1,0 +1,1 @@
+web: gunicorn stravafab:app --log-file=-
