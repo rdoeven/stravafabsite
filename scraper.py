@@ -44,6 +44,7 @@ headers = {
     "application/ecmascript, application/x-ecmascript",
     "Host": "www.strava.com",
     "X-Requested-With": "XMLHttpRequest",
+    "cookie": "_strava4_session=vdl5r7bn1h8q2h04eju3mlh0l5c3hoh0; _sp_ses.047d=*; _sp_id.047d=be26d328-b795-4cbf-88b2-0a4b8eb96343.1614779385.6.1618094430.1617907316.0b5f4533-89e4-402e-a0c4-a17cb95dc7ce"
 }
 
 

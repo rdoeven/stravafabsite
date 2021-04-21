@@ -35,4 +35,4 @@ def index():
     return render_template("index.html", totaalrest = lst ,gemiddeldrest = lstgem)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
